@@ -1,0 +1,124 @@
+/* The Modal (background) */
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  height: 20rem;
+  width: 40rem;
+  margin: 15% auto;
+  background-color: #ececec;
+
+  border: 20px solid #5b975b;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-image: repeating-linear-gradient(
+      45deg,
+      #5cb75c,
+      #238c23 20px,
+      #d7d7d7 20px,
+      white 40px
+    )
+    20;
+
+  .content {
+    flex: 3;
+    padding: 1rem;
+    text-align: justify;
+    color: black;
+    font-style: italic;
+    line-height: 3.07rem;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+  }
+
+  .sender-info {
+    flex: 2;
+    display: flex;
+    padding: 1rem;
+
+    .vl {
+      border-left: 2px solid #5cb75c;
+      height: 100%;
+    }
+
+    .sender-details {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+
+      .modal-text {
+        padding: 8px;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-text {
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem;
+  color: black;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+@media only screen and (max-width: 720px) {
+  .modal-content {
+    flex-direction: column-reverse;
+    width: 90dvw;
+    height: auto;
+
+    .sender-info {
+      padding-bottom: 0;
+
+      .vl {
+        display: none;
+      }
+
+      .sender-details {
+        flex-direction: row-reverse;
+        border-bottom: 2px solid #5cb75c;
+        padding-bottom: 2rem;
+
+        .modal-text {
+          width: 100%;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
