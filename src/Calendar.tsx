@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
 import pineTree from "/src/assets/pine_tree_branches.png";
@@ -8,8 +8,17 @@ import Day from "./Day";
 
 const AdventCalendar2025 = () => {
   const [content, setContent] = useState<React.ReactNode>(null);
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const timerId = setInterval(() => setCurrentDateTime(new Date()), 1000);
+
+    return () => {
+      clearInterval(timerId);
+    };
+  }, []);
 
   // Winter stickers for each day
   // const winterStickers = [
@@ -70,21 +79,123 @@ const AdventCalendar2025 = () => {
   const calendarDays = [
     {
       day: 1,
-      content: (
-        <>
-          <p>Az én kis ajándékom neked ebben a különleges időszakban.</p>
-          <p>Tudd, hogy különleges vagy számomra.</p>
-        </>
-      ),
+      content: <div>Content for Day 1</div>,
+      validFrom: new Date("2024-12-01T00:00:00"),
     },
     {
       day: 2,
-      content: (
-        <>
-          <p>Második nap tartalma.</p>
-          <p>Boldog ünnepeket!</p>
-        </>
-      ),
+      content: <div>Content for Day 2</div>,
+      validFrom: new Date("2024-12-02T00:00:00"),
+    },
+    {
+      day: 3,
+      content: <div>Content for Day 3</div>,
+      validFrom: new Date("2024-12-03T00:00:00"),
+    },
+    {
+      day: 4,
+      content: <div>Content for Day 4</div>,
+      validFrom: new Date("2025-12-04T00:00:00"),
+    },
+    {
+      day: 5,
+      content: <div>Content for Day 5</div>,
+      validFrom: new Date("2025-12-05T00:00:00"),
+    },
+    {
+      day: 6,
+      content: <div>Content for Day 6</div>,
+      validFrom: new Date("2025-12-06T00:00:00"),
+    },
+    {
+      day: 7,
+      content: <div>Content for Day 7</div>,
+      validFrom: new Date("2025-12-07T00:00:00"),
+    },
+    {
+      day: 8,
+      content: <div>Content for Day 8</div>,
+      validFrom: new Date("2025-12-08T00:00:00"),
+    },
+    {
+      day: 9,
+      content: <div>Content for Day 9</div>,
+      validFrom: new Date("2025-12-09T00:00:00"),
+    },
+    {
+      day: 10,
+      content: <div>Content for Day 10</div>,
+      validFrom: new Date("2025-12-10T00:00:00"),
+    },
+    {
+      day: 11,
+      content: <div>Content for Day 11</div>,
+      validFrom: new Date("2025-12-11T00:00:00"),
+    },
+    {
+      day: 12,
+      content: <div>Content for Day 12</div>,
+      validFrom: new Date("2025-12-12T00:00:00"),
+    },
+    {
+      day: 13,
+      content: <div>Content for Day 13</div>,
+      validFrom: new Date("2025-12-13T00:00:00"),
+    },
+    {
+      day: 14,
+      content: <div>Content for Day 14</div>,
+      validFrom: new Date("2025-12-14T00:00:00"),
+    },
+    {
+      day: 15,
+      content: <div>Content for Day 15</div>,
+      validFrom: new Date("2025-12-15T00:00:00"),
+    },
+    {
+      day: 16,
+      content: <div>Content for Day 16</div>,
+      validFrom: new Date("2025-12-16T00:00:00"),
+    },
+    {
+      day: 17,
+      content: <div>Content for Day 17</div>,
+      validFrom: new Date("2025-12-17T00:00:00"),
+    },
+    {
+      day: 18,
+      content: <div>Content for Day 18</div>,
+      validFrom: new Date("2025-12-18T00:00:00"),
+    },
+    {
+      day: 19,
+      content: <div>Content for Day 19</div>,
+      validFrom: new Date("2025-12-19T00:00:00"),
+    },
+    {
+      day: 20,
+      content: <div>Content for Day 20</div>,
+      validFrom: new Date("2025-12-20T00:00:00"),
+    },
+    {
+      day: 21,
+      content: <div>Content for Day 21</div>,
+      validFrom: new Date("2025-12-21T00:00:00"),
+    },
+    {
+      day: 22,
+      content: <div>Content for Day 22</div>,
+      validFrom: new Date("2025-12-22T00:00:00"),
+    },
+    {
+      day: 23,
+      content: <div>Content for Day 23</div>,
+      validFrom: new Date("2025-12-23T00:00:00"),
+    },
+    {
+      day: 24,
+      content: <div>Content for Day 24</div>,
+      validFrom: new Date("2025-12-24T00:00:00"),
     },
   ];
 
@@ -134,15 +245,15 @@ const AdventCalendar2025 = () => {
             {/* On mobile: grid layout (ordered), On desktop: absolute positioning (scattered) */}
             <div className="absolute inset-0 pl-4 pr-4 md:p-0 ">
               {/* Mobile: Grid layout */}
-              <div className="grid grid-cols-4 gap-2 md:hidden h-full overflow-y-auto py-16 overflow-x-hidden">
+              <div className="grid grid-cols-4 gap-2 md:hidden h-full overflow-y-auto py-16 pt-18 overflow-x-hidden">
                 {Array.from({ length: 24 }, (_, i) => (
                   <Day
                     key={i}
-                    classNames="relative aspect-square bg-[#8e4326] bg-opacity-80 rounded-lg flex items-center justify-center text-white font-bold text-lg hover:bg-[#b7552f] transition-transform cursor-pointer shadow-lg"
-                    i={i}
+                    calendarDay={calendarDays[i]}
+                    classNames="relative aspect-square bg-[#8e4326] bg-opacity-80 rounded-lg flex items-center justify-center text-white font-bold text-lg  transition-transform cursor-pointer shadow-lg"
+                    currentDateTime={currentDateTime}
                     setContent={setContent}
                     setIsModalOpen={setIsModalOpen}
-                    calendarDays={calendarDays}
                   />
                 ))}
               </div>
@@ -152,11 +263,11 @@ const AdventCalendar2025 = () => {
                 {Array.from({ length: 24 }, (_, i) => (
                   <Day
                     key={i}
-                    classNames="absolute bg-[#8e4326] bg-opacity-90 rounded-lg flex items-center justify-center text-white font-bold hover:scale-110 transition-transform cursor-pointer shadow-xl"
-                    i={i}
+                    classNames="absolute bg-[#8e4326] bg-opacity-90 rounded-lg flex items-center justify-center text-white font-bold transition-transform cursor-pointer shadow-xl"
+                    currentDateTime={currentDateTime}
                     setContent={setContent}
                     setIsModalOpen={setIsModalOpen}
-                    calendarDays={calendarDays}
+                    calendarDay={calendarDays[i]}
                     style={{
                       top: windowPositions[i].top,
                       left: windowPositions[i].left,
