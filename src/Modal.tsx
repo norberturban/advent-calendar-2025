@@ -10,8 +10,11 @@ const Modal = ({
   const modalRef = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = useCallback(
-    (e) => {
-      if (modalRef.current && !modalRef.current.contains(e.target)) {
+    (e: MouseEvent) => {
+      if (
+        modalRef.current &&
+        !modalRef.current.contains(e.target as HTMLElement)
+      ) {
         setIsModalOpen(false);
       }
     },
