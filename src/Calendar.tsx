@@ -48,6 +48,33 @@ const AdventCalendar2025 = () => {
   //   "🎁",
   // ];
 
+  const bulbPositions = [
+    { top: "2%", left: "3%" },
+    { top: "16%", left: "20%" },
+    { top: "10%", left: "40%" },
+    { top: "6%", left: "63%" },
+    { top: "16.5%", left: "93%" },
+    { top: "24%", left: "10%" },
+    { top: "38%", left: "32%" },
+    { top: "30%", left: "50%" },
+    { top: "23%", left: "73%" },
+    { top: "39%", left: "80%" },
+    { top: "40%", left: "5%" },
+    { top: "48%", left: "17%" },
+    { top: "48%", left: "43%" },
+    { top: "48%", left: "60%" },
+    { top: "60%", left: "85%" },
+    { top: "65%", left: "10%" },
+    { top: "61%", left: "28%" },
+    { top: "66%", left: "54%" },
+    { top: "72%", left: "65%" },
+    { top: "78%", left: "86%" },
+    { top: "83%", left: "16%" },
+    { top: "85%", left: "30%" },
+    { top: "92%", left: "55%" },
+    { top: "85%", left: "75%" },
+  ];
+
   // Scattered positions with better spacing to avoid overlap
   const windowPositions = [
     { top: "8%", left: "5%" },
@@ -245,12 +272,12 @@ const AdventCalendar2025 = () => {
             {/* On mobile: grid layout (ordered), On desktop: absolute positioning (scattered) */}
             <div className="absolute inset-0 pl-4 pr-4 md:p-0 ">
               {/* Mobile: Grid layout */}
-              <div className="grid grid-cols-4 gap-2 md:hidden h-full overflow-y-auto py-16 pt-18 overflow-x-hidden">
+              <div className="grid grid-cols-4 gap-4 md:hidden h-full overflow-y-auto py-16 pt-18 overflow-x-hidden">
                 {Array.from({ length: 24 }, (_, i) => (
                   <Day
                     key={i}
                     calendarDay={calendarDays[i]}
-                    classNames="relative aspect-square bg-[#8e4326] bg-opacity-80 rounded-lg flex items-center justify-center text-white font-bold text-lg  transition-transform cursor-pointer shadow-lg"
+                    classNames="relative aspect-square bg-[#8e4326] bg-opacity-80 rounded-lg flex items-center justify-center text-white font-bold text-lg transition-transform"
                     currentDateTime={currentDateTime}
                     setContent={setContent}
                     setIsModalOpen={setIsModalOpen}
@@ -263,7 +290,7 @@ const AdventCalendar2025 = () => {
                 {Array.from({ length: 24 }, (_, i) => (
                   <Day
                     key={i}
-                    classNames="absolute bg-[#8e4326] bg-opacity-90 rounded-lg flex items-center justify-center text-white font-bold transition-transform cursor-pointer shadow-xl"
+                    classNames="absolute bg-[#8e4326] bg-opacity-90 rounded-lg flex items-center justify-center text-white font-bold transition-transform"
                     currentDateTime={currentDateTime}
                     setContent={setContent}
                     setIsModalOpen={setIsModalOpen}
@@ -275,6 +302,23 @@ const AdventCalendar2025 = () => {
                       height: "80px",
                     }}
                   />
+                ))}
+                {Array.from({ length: 24 }, (_, i) => (
+                  <div
+                    key={i}
+                    className="absolute w-4 h-4 rounded-full"
+                    style={{
+                      top: bulbPositions[i].top,
+                      left: bulbPositions[i].left,
+                      background: isDarkMode
+                        ? "radial-gradient(circle, #fffff8 0%, #ffb347 55%, #ff8c42 85%)"
+                        : "radial-gradient(circle, #ff8c42 85%)",
+                      boxShadow: isDarkMode
+                        ? "0 0 40px 15px rgba(255, 179, 71, 0.8)"
+                        : "none",
+                      opacity: isDarkMode ? 1 : 0.7,
+                    }}
+                  ></div>
                 ))}
               </div>
             </div>

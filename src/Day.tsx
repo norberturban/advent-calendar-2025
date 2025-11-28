@@ -24,7 +24,9 @@ const Day = ({
   return (
     <div
       className={`${classNames} select-none ${
-        isCalendarDayActive ? "hover:bg-[#b7552f]" : "bg-[#C6A683]"
+        isCalendarDayActive
+          ? "hover:bg-[#b7552f] cursor-pointer shadow-lg"
+          : "bg-[#C6A683] cursor-default"
       }`}
       onClick={() => {
         if (isCalendarDayActive) {
