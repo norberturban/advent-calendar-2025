@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Moon, Sun } from "lucide-react";
+
+import pineTree from "/src/assets/pine_tree_branches.png";
+
 import GingerbreadMan from "./GingerbreadMan";
 import Modal from "./Modal";
 
@@ -87,7 +90,7 @@ const AdventCalendar2025 = () => {
             className={`w-full h-full object-cover object-center ${
               isDarkMode ? "brightness-65" : ""
             }`}
-            src="src/assets/pine_tree_branches.png"
+            src={pineTree}
           />
 
           <GingerbreadMan />
