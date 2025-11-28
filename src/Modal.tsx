@@ -1,10 +1,15 @@
 import { useCallback, useEffect, useRef } from "react";
-import classes from "./Modal.module.scss";
 import classNames from "classnames";
 
+import peachCat from "/src/assets/peach_cat_6.jpg";
+
+import classes from "./Modal.module.scss";
+
 const Modal = ({
+  content,
   setIsModalOpen,
 }: {
+  content: React.ReactNode;
   setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const modalRef = useRef<HTMLDivElement>(null);
@@ -34,14 +39,7 @@ const Modal = ({
   return (
     <div className={classes.modal}>
       <div className={classes["modal-content"]} ref={modalRef}>
-        <div className={classes.content}>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-            inventore odio deleniti eaque ut similique. Lorem, ipsum dolor sit
-            amet consectetur adipisicing elit. Eligendi inventore odio deleniti
-            eaque ut similique.
-          </p>
-        </div>
+        <div className={classes.content}>{content}</div>
 
         <div className={classes["sender-info"]}>
           <div className={classes.vl} />
@@ -50,7 +48,7 @@ const Modal = ({
               <div className="w-24 h-30">
                 <img
                   className="w-full h-full rounded-xl object-cover object-center"
-                  src="src/assets/peach_cat_6.jpg"
+                  src={peachCat}
                   alt="Sender Avatar"
                   width={100}
                   height={50}

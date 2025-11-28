@@ -3,10 +3,11 @@ import { Moon, Sun } from "lucide-react";
 
 import pineTree from "/src/assets/pine_tree_branches.png";
 
-import GingerbreadMan from "./GingerbreadMan";
 import Modal from "./Modal";
+import Day from "./Day";
 
 const AdventCalendar2025 = () => {
+  const [content, setContent] = useState<React.ReactNode>(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -66,6 +67,27 @@ const AdventCalendar2025 = () => {
     { top: "85%", left: "82%" },
   ];
 
+  const calendarDays = [
+    {
+      day: 1,
+      content: (
+        <>
+          <p>Az én kis ajándékom neked ebben a különleges időszakban.</p>
+          <p>Tudd, hogy különleges vagy számomra.</p>
+        </>
+      ),
+    },
+    {
+      day: 2,
+      content: (
+        <>
+          <p>Második nap tartalma.</p>
+          <p>Boldog ünnepeket!</p>
+        </>
+      ),
+    },
+  ];
+
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
@@ -93,10 +115,10 @@ const AdventCalendar2025 = () => {
             src={pineTree}
           />
 
-          <GingerbreadMan />
+          {/* <GingerbreadMan /> */}
 
           <div className="absolute inset-0 p-8">
-            <div
+            {/* <div
               className="w-6 h-6 rounded-full"
               style={{
                 background: isDarkMode
@@ -106,54 +128,53 @@ const AdventCalendar2025 = () => {
                   ? "0 0 40px 15px rgba(255, 179, 71, 0.8)"
                   : "none",
               }}
-            ></div>
+            ></div> */}
 
             {/* Advent Calendar Windows Container */}
             {/* On mobile: grid layout (ordered), On desktop: absolute positioning (scattered) */}
-            <div className="absolute inset-0 p-4 md:p-0">
+            <div className="absolute inset-0 pl-4 pr-4 md:p-0 ">
               {/* Mobile: Grid layout */}
-              <div className="grid grid-cols-4 gap-2 md:hidden h-full overflow-y-auto py-16">
+              <div className="grid grid-cols-4 gap-2 md:hidden h-full overflow-y-auto py-16 overflow-x-hidden">
                 {Array.from({ length: 24 }, (_, i) => (
-                  <div
+                  <Day
                     key={i}
-                    className="aspect-square bg-red-700 bg-opacity-80 rounded-lg flex items-center justify-center text-white font-bold text-lg border-2 border-yellow-600 hover:scale-105 transition-transform cursor-pointer shadow-lg"
-                    onClick={() => setIsModalOpen(true)}
-                  >
-                    <div className="text-center">
-                      <div className="text-2xl">{i + 1}</div>
-                      <div className="text-xs mt-1">🍪</div>
-                    </div>
-                  </div>
+                    classNames="relative aspect-square bg-[#8e4326] bg-opacity-80 rounded-lg flex items-center justify-center text-white font-bold text-lg hover:bg-[#b7552f] transition-transform cursor-pointer shadow-lg"
+                    i={i}
+                    setContent={setContent}
+                    setIsModalOpen={setIsModalOpen}
+                    calendarDays={calendarDays}
+                  />
                 ))}
               </div>
 
               {/* Desktop: Scattered absolute positioning */}
               <div className="hidden md:block relative w-full h-full">
                 {Array.from({ length: 24 }, (_, i) => (
-                  <div
+                  <Day
                     key={i}
-                    className="absolute bg-red-700 bg-opacity-90 rounded-lg flex items-center justify-center text-white font-bold border-2 border-yellow-600 hover:scale-110 transition-transform cursor-pointer shadow-xl"
-                    onClick={() => setIsModalOpen(true)}
+                    classNames="absolute bg-[#8e4326] bg-opacity-90 rounded-lg flex items-center justify-center text-white font-bold hover:scale-110 transition-transform cursor-pointer shadow-xl"
+                    i={i}
+                    setContent={setContent}
+                    setIsModalOpen={setIsModalOpen}
+                    calendarDays={calendarDays}
                     style={{
                       top: windowPositions[i].top,
                       left: windowPositions[i].left,
                       width: "80px",
                       height: "80px",
                     }}
-                  >
-                    <div className="text-center">
-                      <div className="text-3xl">{i + 1}</div>
-                      <div className="text-sm mt-1">🍪</div>
-                    </div>
-                  </div>
+                  />
                 ))}
               </div>
             </div>
           </div>
         </div>
       </div>
+
       {/* Modal Component */}
-      {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
+      {isModalOpen && (
+        <Modal setIsModalOpen={setIsModalOpen} content={content} />
+      )}
     </>
   );
 };
