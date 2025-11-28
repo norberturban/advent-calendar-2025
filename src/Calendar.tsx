@@ -75,6 +75,33 @@ const AdventCalendar2025 = () => {
     { top: "85%", left: "75%" },
   ];
 
+  const bulbPositionsMobile = [
+    { top: "2%", left: "3%" },
+    { top: "16%", left: "24%" },
+    { top: "6.5%", left: "36%" },
+    { top: "5%", left: "63%" },
+    { top: "16.5%", left: "96%" },
+    { top: "24%", left: "10%" },
+    { top: "38%", left: "32%" },
+    { top: "30%", left: "50%" },
+    { top: "23%", left: "73%" },
+    { top: "39%", left: "80%" },
+    { top: "40%", left: "5%" },
+    { top: "48%", left: "17%" },
+    { top: "48%", left: "43%" },
+    { top: "48%", left: "60%" },
+    { top: "57%", left: "80%" },
+    { top: "65%", left: "10%" },
+    { top: "57%", left: "25%" },
+    { top: "66%", left: "47%" },
+    { top: "72%", left: "65%" },
+    { top: "75%", left: "86%" },
+    { top: "83%", left: "16%" },
+    { top: "85%", left: "30%" },
+    { top: "92%", left: "55%" },
+    { top: "87%", left: "96%" },
+  ];
+
   // Scattered positions with better spacing to avoid overlap
   const windowPositions = [
     { top: "8%", left: "5%" },
@@ -281,7 +308,25 @@ const AdventCalendar2025 = () => {
                     currentDateTime={currentDateTime}
                     setContent={setContent}
                     setIsModalOpen={setIsModalOpen}
+                    //style={{ zIndex: 1 }}
                   />
+                ))}
+                {Array.from({ length: 24 }, (_, i) => (
+                  <div
+                    key={i}
+                    className="absolute w-4 h-4 rounded-full"
+                    style={{
+                      top: bulbPositionsMobile[i].top,
+                      left: bulbPositionsMobile[i].left,
+                      background: isDarkMode
+                        ? "radial-gradient(circle, #fffff8 0%, #ffb347 55%, #ff8c42 85%)"
+                        : "radial-gradient(circle, #ff8c42 85%)",
+                      boxShadow: isDarkMode
+                        ? "0 0 40px 15px rgba(255, 179, 71, 0.8)"
+                        : "none",
+                      opacity: isDarkMode ? 1 : 0.7,
+                    }}
+                  ></div>
                 ))}
               </div>
 
