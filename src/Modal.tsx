@@ -56,14 +56,14 @@ const Modal = ({
               <div className="w-24 h-30">
                 <img
                   className="w-full h-full rounded-xl object-cover object-center"
-                  src={peachCat}
+                  src={`/src/assets/peach_cat_${content?.day}.jpg`}
                   alt="Sender Avatar"
                   width={100}
                   height={50}
                 />
               </div>
               <img
-                className="absolute w-25 h-25 rounded-xl object-cover object-center top-3 right-27 rotate-25 opacity-75"
+                className="absolute w-25 h-25 rounded-xl object-cover object-center top-3 right-27 rotate-25 opacity-50"
                 src={stamp}
                 alt="Stamp"
               />

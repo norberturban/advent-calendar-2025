@@ -2,7 +2,7 @@
 .modal {
   display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 10; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -39,15 +39,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     flex: 3;
     padding: 1rem;
     text-align: justify;
+    font-size: 1.2rem;
     color: black;
     font-style: italic;
     line-height: 3.07rem;
     text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 6px;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
     text-decoration-color: #5cb75c;
   }
 
@@ -90,8 +92,8 @@
   margin-left: 1rem;
   color: black;
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
   text-decoration-color: #5cb75c;
 }
 

@@ -140,32 +140,52 @@ const AdventCalendar2025 = () => {
       day: 1,
       content: (
         <>
-          <p>
-            Megjött a karácsonyi naptár, azaz az adventi kalendár, ahol 24 ablak
-            alatt, napról napra egy-egy újabb meglepetés, újabb nyitás vár.
-          </p>
+          Megjött a karácsonyi naptár, azaz az adventi kalendár, ahol 24 ablak
+          alatt, napról napra egy-egy újabb meglepetés, újabb nyitás vár. 🎁
         </>
       ),
-      senderText: "❤️ Tőlem, neked! ❤️",
+      senderText: "Szerelmed ❤️",
       validFrom: new Date("2024-12-01T00:00:00"),
     },
     {
       day: 2,
-      content: <div>Content for Day 2</div>,
-      senderText: "❤️ Tőlem, neked! ❤️",
+      content: (
+        <>
+          Hideg estéken a meleg szoba sem tudna meghittséget, melegséget hozni
+          számomra, ha a szívemet nem melengetné szerelmünk lángja! 🕯️
+        </>
+      ),
+      senderText: "Kicsimnek ❤️",
       validFrom: new Date("2024-12-02T00:00:00"),
     },
     {
       day: 3,
-      content: <div>Content for Day 3</div>,
-      senderText: "❤️ Tőlem, neked! ❤️",
+      content: (
+        <>
+          Cicák általános viselkedése: figyelmet igényel, szüksége van rengeteg
+          törődése és simogatásra, mozgásra vágyik, valamint szeret játszani és
+          kíváncsi természetű. Nini, ez nem te vagy? 😺
+        </>
+      ),
+      senderText: "❤️ Tőlem, neked ❤️",
       validFrom: new Date("2024-12-03T00:00:00"),
     },
     {
       day: 4,
-      content: <div>Content for Day 4</div>,
+      content: (
+        <>
+          <p>
+            Újabb nap telik el, múlik el újra, rohan az év előre, szinte itt a
+            vége.
+          </p>
+          <p>
+            De minden egyes napot becsülöm, mert itt vagy nekem, velem, életem
+            része. ❤️
+          </p>
+        </>
+      ),
       senderText: "❤️ Tőlem, neked! ❤️",
-      validFrom: new Date("2025-12-04T00:00:00"),
+      validFrom: new Date("2024-12-04T00:00:00"),
     },
     {
       day: 5,
@@ -175,9 +195,20 @@ const AdventCalendar2025 = () => {
     },
     {
       day: 6,
-      content: <div>Content for Day 6</div>,
+      content: (
+        <>
+          <p>
+            Mai nap a Mikulás napja, ha jó voltál, akkor finomságokkal tele a
+            csizma.
+          </p>
+          <p>
+            Ellenben virgács várhat, reméljük az éven nem éreztél rosszaságra
+            sok vágyat! 🎅
+          </p>
+        </>
+      ),
       senderText: "❤️ Tőlem, neked! ❤️",
-      validFrom: new Date("2025-12-06T00:00:00"),
+      validFrom: new Date("2024-12-06T00:00:00"),
     },
     {
       day: 7,
