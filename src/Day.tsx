@@ -9,10 +9,22 @@ const Day = ({
   setIsModalOpen,
   style,
 }: {
-  calendarDay: { day: number; content: React.ReactNode; validFrom: Date };
+  calendarDay: {
+    day: number;
+    content: React.ReactNode;
+    senderText: string;
+    validFrom: Date;
+  };
   classNames: string;
   currentDateTime: Date;
-  setContent: React.Dispatch<React.SetStateAction<React.ReactNode | null>>;
+  setContent: React.Dispatch<
+    React.SetStateAction<{
+      day: number;
+      content: React.ReactNode;
+      senderText: string;
+      validFrom: Date;
+    } | null>
+  >;
   setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
   style?: React.CSSProperties;
 }) => {
@@ -30,7 +42,7 @@ const Day = ({
       }`}
       onClick={() => {
         if (isCalendarDayActive) {
-          setContent(calendarDay.content || null);
+          setContent(calendarDay);
           setIsModalOpen(true);
         }
       }}

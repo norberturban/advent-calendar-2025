@@ -7,7 +7,12 @@ import Modal from "./Modal";
 import Day from "./Day";
 
 const AdventCalendar2025 = () => {
-  const [content, setContent] = useState<React.ReactNode>(null);
+  const [content, setContent] = useState<{
+    day: number;
+    content: React.ReactNode;
+    senderText: string;
+    validFrom: Date;
+  } | null>(null);
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -133,122 +138,153 @@ const AdventCalendar2025 = () => {
   const calendarDays = [
     {
       day: 1,
-      content: <div>Content for Day 1</div>,
+      content: (
+        <>
+          <p>
+            Megjött a karácsonyi naptár, azaz az adventi kalendár, ahol 24 ablak
+            alatt, napról napra egy-egy újabb meglepetés, újabb nyitás vár.
+          </p>
+        </>
+      ),
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2024-12-01T00:00:00"),
     },
     {
       day: 2,
       content: <div>Content for Day 2</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2024-12-02T00:00:00"),
     },
     {
       day: 3,
       content: <div>Content for Day 3</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2024-12-03T00:00:00"),
     },
     {
       day: 4,
       content: <div>Content for Day 4</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-04T00:00:00"),
     },
     {
       day: 5,
       content: <div>Content for Day 5</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-05T00:00:00"),
     },
     {
       day: 6,
       content: <div>Content for Day 6</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-06T00:00:00"),
     },
     {
       day: 7,
       content: <div>Content for Day 7</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-07T00:00:00"),
     },
     {
       day: 8,
       content: <div>Content for Day 8</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-08T00:00:00"),
     },
     {
       day: 9,
       content: <div>Content for Day 9</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-09T00:00:00"),
     },
     {
       day: 10,
       content: <div>Content for Day 10</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-10T00:00:00"),
     },
     {
       day: 11,
       content: <div>Content for Day 11</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-11T00:00:00"),
     },
     {
       day: 12,
       content: <div>Content for Day 12</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-12T00:00:00"),
     },
     {
       day: 13,
       content: <div>Content for Day 13</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-13T00:00:00"),
     },
     {
       day: 14,
       content: <div>Content for Day 14</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-14T00:00:00"),
     },
     {
       day: 15,
       content: <div>Content for Day 15</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-15T00:00:00"),
     },
     {
       day: 16,
       content: <div>Content for Day 16</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-16T00:00:00"),
     },
     {
       day: 17,
       content: <div>Content for Day 17</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-17T00:00:00"),
     },
     {
       day: 18,
       content: <div>Content for Day 18</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-18T00:00:00"),
     },
     {
       day: 19,
       content: <div>Content for Day 19</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-19T00:00:00"),
     },
     {
       day: 20,
       content: <div>Content for Day 20</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-20T00:00:00"),
     },
     {
       day: 21,
       content: <div>Content for Day 21</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-21T00:00:00"),
     },
     {
       day: 22,
       content: <div>Content for Day 22</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-22T00:00:00"),
     },
     {
       day: 23,
       content: <div>Content for Day 23</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-23T00:00:00"),
     },
     {
       day: 24,
       content: <div>Content for Day 24</div>,
+      senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-24T00:00:00"),
     },
   ];

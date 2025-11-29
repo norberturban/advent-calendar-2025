@@ -36,6 +36,9 @@
     20;
 
   .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex: 3;
     padding: 1rem;
     text-align: justify;
@@ -45,6 +48,7 @@
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 6px;
+    text-decoration-color: #5cb75c;
   }
 
   .sender-info {
@@ -66,6 +70,7 @@
       .modal-text {
         padding: 8px;
         text-align: justify;
+        font-size: clamp(0.7rem, 2.27vw, 1rem);
       }
     }
   }
@@ -87,6 +92,7 @@
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
+  text-decoration-color: #5cb75c;
 }
 
 @media only screen and (max-width: 720px) {
@@ -94,6 +100,10 @@
     flex-direction: column-reverse;
     width: 90dvw;
     height: auto;
+
+    .content {
+      padding: 0.5rem 1rem 1rem;
+    }
 
     .sender-info {
       padding-bottom: 0;
@@ -105,7 +115,7 @@
       .sender-details {
         flex-direction: row-reverse;
         border-bottom: 2px solid #5cb75c;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
 
         .modal-text {
           width: 100%;

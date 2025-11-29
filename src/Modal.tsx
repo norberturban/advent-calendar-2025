@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef } from "react";
 import classNames from "classnames";
 
 import peachCat from "/src/assets/peach_cat_6.jpg";
+import stamp from "/src/assets/stamp.png";
 
 import classes from "./Modal.module.scss";
 
@@ -9,7 +10,12 @@ const Modal = ({
   content,
   setIsModalOpen,
 }: {
-  content: React.ReactNode;
+  content: {
+    day: number;
+    content: React.ReactNode;
+    senderText: string;
+    validFrom: Date;
+  } | null;
   setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const modalRef = useRef<HTMLDivElement>(null);
@@ -39,12 +45,14 @@ const Modal = ({
   return (
     <div className={classes.modal}>
       <div className={classes["modal-content"]} ref={modalRef}>
-        <div className={classes.content}>{content}</div>
+        <div className={classNames(classes.content, "twinkle-star-regular")}>
+          {content?.content}
+        </div>
 
         <div className={classes["sender-info"]}>
           <div className={classes.vl} />
           <div className={classes["sender-details"]}>
-            <div className="flex justify-end">
+            <div className="relative flex justify-end">
               <div className="w-24 h-30">
                 <img
                   className="w-full h-full rounded-xl object-cover object-center"
@@ -54,15 +62,21 @@ const Modal = ({
                   height={50}
                 />
               </div>
+              <img
+                className="absolute w-25 h-25 rounded-xl object-cover object-center top-3 right-27 rotate-25 opacity-75"
+                src={stamp}
+                alt="Stamp"
+              />
             </div>
             <div
               className={classNames(
                 classes["modal-text"],
                 "flex",
-                "merienda-text"
+                "merienda-text",
+                "twinkle-star-regular"
               )}
             >
-              ❤️ Tőlem, neked! ❤️
+              {content?.senderText}
             </div>
           </div>
         </div>
