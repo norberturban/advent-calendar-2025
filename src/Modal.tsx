@@ -1,6 +1,30 @@
 import { useCallback, useEffect, useRef } from "react";
 import classNames from "classnames";
 
+import peachCat1 from "/src/assets/peach_cat_1.jpg";
+import peachCat2 from "/src/assets/peach_cat_2.jpg";
+import peachCat3 from "/src/assets/peach_cat_3.jpg";
+import peachCat4 from "/src/assets/peach_cat_4.jpg";
+import peachCat5 from "/src/assets/peach_cat_5.jpg";
+import peachCat6 from "/src/assets/peach_cat_6.jpg";
+import peachCat7 from "/src/assets/peach_cat_7.jpg";
+import peachCat8 from "/src/assets/peach_cat_8.jpg";
+import peachCat9 from "/src/assets/peach_cat_9.jpg";
+import peachCat10 from "/src/assets/peach_cat_10.jpg";
+import peachCat11 from "/src/assets/peach_cat_11.jpg";
+import peachCat12 from "/src/assets/peach_cat_12.jpg";
+import peachCat13 from "/src/assets/peach_cat_13.jpg";
+import peachCat14 from "/src/assets/peach_cat_14.jpg";
+import peachCat15 from "/src/assets/peach_cat_15.jpg";
+import peachCat16 from "/src/assets/peach_cat_16.jpg";
+import peachCat17 from "/src/assets/peach_cat_17.jpg";
+import peachCat18 from "/src/assets/peach_cat_18.jpg";
+import peachCat19 from "/src/assets/peach_cat_19.jpg";
+import peachCat20 from "/src/assets/peach_cat_20.jpg";
+import peachCat21 from "/src/assets/peach_cat_21.jpg";
+import peachCat22 from "/src/assets/peach_cat_22.jpg";
+import peachCat23 from "/src/assets/peach_cat_23.jpg";
+import peachCat24 from "/src/assets/peach_cat_24.jpg";
 import stamp from "/src/assets/stamp.png";
 
 import classes from "./Modal.module.scss";
@@ -41,6 +65,33 @@ const Modal = ({
     };
   }, [handleClickOutside]);
 
+  const peachCatImages = [
+    peachCat1,
+    peachCat2,
+    peachCat3,
+    peachCat4,
+    peachCat5,
+    peachCat6,
+    peachCat7,
+    peachCat8,
+    peachCat9,
+    peachCat10,
+    peachCat11,
+    peachCat12,
+    peachCat13,
+    peachCat14,
+    peachCat15,
+    peachCat16,
+    peachCat17,
+    peachCat18,
+    peachCat19,
+    peachCat20,
+    peachCat21,
+    peachCat22,
+    peachCat23,
+    peachCat24,
+  ];
+
   return (
     <div className={classes.modal}>
       <div className={classes["modal-content"]} ref={modalRef}>
@@ -54,8 +105,8 @@ const Modal = ({
             <div className="relative flex justify-end">
               <div className="w-24 h-30">
                 <img
-                  className="w-full h-full rounded-xl object-cover object-center"
-                  src={`/src/assets/peach_cat_${content?.day}.jpg`}
+                  className="w-full h-full rounded-xl object-cover object-center border-2 border-[#5cb75c]"
+                  src={peachCatImages[content?.day ? content.day - 1 : 0]}
                   alt="Sender Avatar"
                   width={100}
                   height={50}
@@ -79,10 +130,6 @@ const Modal = ({
             </div>
           </div>
         </div>
-        {/* <span className={classes.close} onClick={() => setIsModalOpen(false)}>
-          &times;
-        </span>
-        <p className="merienda-text">Some text in the Modal..</p> */}
       </div>
     </div>
   );
