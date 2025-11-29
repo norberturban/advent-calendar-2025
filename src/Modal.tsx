@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
 import classNames from "classnames";
 
-import peachCat from "/src/assets/peach_cat_6.jpg";
 import stamp from "/src/assets/stamp.png";
 
 import classes from "./Modal.module.scss";
