@@ -53,7 +53,6 @@ const Day = ({
       )}
       <div className="text-center">
         <div className="text-3xl">{calendarDay.day}</div>
-        {/* <div className="text-sm mt-1">🍪</div> */}
       </div>
     </div>
   );
