@@ -163,7 +163,7 @@ const AdventCalendar2025 = () => {
       content: (
         <>
           Cicák általános viselkedése: figyelmet igényel, szüksége van rengeteg
-          törődése és simogatásra, mozgásra vágyik, valamint szeret játszani és
+          törődésre és simogatásra, mozgásra vágyik, valamint szeret játszani és
           kíváncsi természetű. Nini, ez nem te vagy? 😺
         </>
       ),
