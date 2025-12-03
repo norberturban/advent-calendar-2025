@@ -217,37 +217,81 @@ const AdventCalendar2025 = () => {
     },
     {
       day: 7,
-      content: <div>Content for Day 7</div>,
+      content: (
+        <>
+          Együtt veled, szállni a fellegek felett, fogni a két kezed, csak fogd
+          szorosan és el ne engedd, elképesztően SZERETLEK! 😘
+        </>
+      ),
       senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-07T00:00:00"),
     },
     {
       day: 8,
-      content: <div>Content for Day 8</div>,
+      content: (
+        <>
+          <p>Egy érzés, egy szó, egy vágy, mely szárnyra kel bennem,</p>
+          <p>Mert benned talált otthonra minden egyes porcikám,</p>
+          <p>S ha hozzád bújik szívem, elcsitul bennem a világ 💘</p>
+        </>
+      ),
       senderText: "Életem értelmének ❤️",
       validFrom: new Date("2025-12-08T00:00:00"),
     },
     {
       day: 9,
-      content: <div>Content for Day 9</div>,
+      content: (
+        <>
+          <p>Az élet hosszúnak tűnik, de a döntések rövidek.</p>
+          <p>Egy pillanat alatt sok minden történhet.</p>
+          <p>
+            Mi jól döntöttünk és számunkra minden nap bővül tovább a történet 💞
+          </p>
+        </>
+      ),
       senderText: "Szerelmed ❤️",
       validFrom: new Date("2025-12-09T00:00:00"),
     },
     {
       day: 10,
-      content: <div>Content for Day 10</div>,
+      content: (
+        <>
+          <p>
+            A főzés nem egyszerű feladat, de egy jó recept mindent megváltoztat.
+          </p>
+          <p>
+            Számunkra van már bevált recept, fűszerezzük tovább a világunkat 🥰
+          </p>
+        </>
+      ),
       senderText: "Kicsimnek ❤️",
       validFrom: new Date("2025-12-10T00:00:00"),
     },
     {
       day: 11,
-      content: <div>Content for Day 11</div>,
+      content: (
+        <>
+          <p>
+            Emlékek, amiket együtt élünk át és amik örökre a szívünkben élnek.
+          </p>
+          <p>
+            Emlékek, amik megszépítik a mindennapjainkat és színesebb az élet.
+          </p>
+          <p>Emlékek, összekötnek minket 💑</p>
+        </>
+      ),
       senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-11T00:00:00"),
     },
     {
       day: 12,
-      content: <div>Content for Day 12</div>,
+      content: (
+        <>
+          <p>Mindkét kezed ökölbe, nagyujjak kinyújtva, összeérintve.</p>
+          <p>Mutatóujjak kinyújtva, majd hajlítva, körömnél érintkezve.</p>
+          <p>Többi ujjak kinyújtva, ezt küldöm neked, meglepetésbe 🎁</p>
+        </>
+      ),
       senderText: "Életem értelmének ❤️",
       validFrom: new Date("2025-12-12T00:00:00"),
     },
