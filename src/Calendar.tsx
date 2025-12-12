@@ -297,19 +297,46 @@ const AdventCalendar2025 = () => {
     },
     {
       day: 13,
-      content: <div>Content for Day 13</div>,
+      content: (
+        <>
+          <p>
+            A szerelem kimondva egy szó, átélni viszont felemelően jó, kiváló.
+          </p>
+          <p>
+            Köszönöm, hogy ezt veled tehetem, te vagy a szívem, a lelkem, az
+            életem ❤️
+          </p>
+        </>
+      ),
       senderText: "Szerelmed ❤️",
       validFrom: new Date("2025-12-13T00:00:00"),
     },
     {
       day: 14,
-      content: <div>Content for Day 14</div>,
+      content: (
+        <>
+          <p>
+            Virágot a virágnak, tarja a mondás, mert igaz te virágom, mindig
+            örülsz egy virágnak.
+          </p>
+          <p>
+            Legyen akár egy szál vagy csokor, mindig megcsillan az öröm,
+            látszódik a mosoly 🌺
+          </p>
+        </>
+      ),
       senderText: "Kicsimnek ❤️",
       validFrom: new Date("2025-12-14T00:00:00"),
     },
     {
       day: 15,
-      content: <div>Content for Day 15</div>,
+      content: (
+        <>
+          Bárhol is legyünk, ketten együtt, akár csak ölelkezünk vagy
+          szerelmeskedünk, akár az érzelmeinkben elmerülünk vagy a fellegekbe
+          elrepülünk! ✈️
+        </>
+      ),
       senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-15T00:00:00"),
     },
