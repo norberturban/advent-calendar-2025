@@ -342,25 +342,47 @@ const AdventCalendar2025 = () => {
     },
     {
       day: 16,
-      content: <div>Content for Day 16</div>,
+      content: (
+        <>
+          Táncoljunk a szív ritmusára, szálljunk levegőbe a boldogságtól,
+          aldujunk egymás karjaiban a mámortól, olvadjunk össze a vágytól 😊
+        </>
+      ),
       senderText: "Életem értelmének ❤️",
       validFrom: new Date("2025-12-16T00:00:00"),
     },
     {
       day: 17,
-      content: <div>Content for Day 17</div>,
+      content: (
+        <>
+          Nevessél nekem minden egyes nap, hogy a boldogságodat ismerjem és a
+          szívemben örökkön éljenek eme pillanatok 🥰
+        </>
+      ),
       senderText: "Szerelmed ❤️",
       validFrom: new Date("2025-12-17T00:00:00"),
     },
     {
       day: 18,
-      content: <div>Content for Day 18</div>,
+      content: (
+        <>
+          Szívem szíveddel együtt dobban, hol halkan, s hol hangosabban, a
+          világon pedig téged és csakis téged SZERETLEK a leges leges legjobban
+          😍
+        </>
+      ),
       senderText: "Kicsimnek ❤️",
       validFrom: new Date("2025-12-18T00:00:00"),
     },
     {
       day: 19,
-      content: <div>Content for Day 19</div>,
+      content: (
+        <>
+          A sors sok mindenki számára ismeretlen, én is csak részben ismerem,
+          tudom merre viszi a szívem, merre tereli az életem és ezeket veled
+          oszthatom meg édes egyetlenem 💘
+        </>
+      ),
       senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-19T00:00:00"),
     },
