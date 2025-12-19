@@ -388,31 +388,86 @@ const AdventCalendar2025 = () => {
     },
     {
       day: 20,
-      content: <div>Content for Day 20</div>,
+      content: (
+        <>
+          <p>
+            Huncutok vagyunk, ezt nem lehet tagadni sem, egyszer te, sokszor én
+            én vagyok sütikészen 🍪
+          </p>
+          <p>
+            Hülyeségből sosem elég, ettől jön meg az életkedv, csak közösen
+            éljük át, így maxmimális a jókedv! 😺
+          </p>
+        </>
+      ),
       senderText: "Életem értelmének ❤️",
       validFrom: new Date("2025-12-20T00:00:00"),
     },
     {
       day: 21,
-      content: <div>Content for Day 21</div>,
+      content: (
+        <>
+          <p>
+            Utazás a szerelem romantikus folyóján, naplementében a szerelem
+            varázsán.
+          </p>
+          <p>
+            A hajónk csak előre tör, szinte táncol a vízen, ringatózunk
+            kellemesen, együtt kéz a kézben, mint a kezdetben 😘
+          </p>
+        </>
+      ),
       senderText: "Szerelmed ❤️",
       validFrom: new Date("2025-12-21T00:00:00"),
     },
     {
       day: 22,
-      content: <div>Content for Day 22</div>,
+      content: (
+        <>
+          <p>
+            Ha kérdeznéd miért vagyok veled, én azt válaszolnám, mert annyira
+            szeretlek.
+          </p>
+          <p>
+            Mert nem akarom, hogy akár egy perc teljen nélküled, lássam mindig a
+            mosolyodat, kerek pofidat és a gyönyörű szemed 😻
+          </p>
+        </>
+      ),
       senderText: "Kicsimnek ❤️",
       validFrom: new Date("2025-12-22T00:00:00"),
     },
     {
       day: 23,
-      content: <div>Content for Day 23</div>,
+      content: (
+        <>
+          <p>
+            Álom vagy valóság? Már néha magam sem tudom kicsi drága angyalom.
+          </p>
+          <p>
+            Szárnyait igaz nem látom, de tudom, hogy van neki, az aranyos, cuki,
+            helyes párját pedig nagyon szereti ❤️
+          </p>
+          <p></p>
+        </>
+      ),
       senderText: "❤️ Tőlem, neked! ❤️",
       validFrom: new Date("2025-12-23T00:00:00"),
     },
     {
       day: 24,
-      content: <div>Content for Day 24</div>,
+      content: (
+        <>
+          <p>
+            Itt van újra a karácsony, megjöttek az ünnepek, ünneplünk közösen
+            veled.
+          </p>
+          <p>
+            Menyasszony és vőlegényként telik most újra el, jövőre meg már mint
+            házaspár, szorosabb kötelékkel 💍
+          </p>
+        </>
+      ),
       senderText: "Életem értelmének ❤️",
       validFrom: new Date("2025-12-24T00:00:00"),
     },
